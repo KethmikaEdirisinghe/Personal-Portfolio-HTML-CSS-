@@ -8,7 +8,7 @@ html{
     padding: 0;
   }
   
-  /* navbar */
+
 .navbar {
   position: fixed;
   top: 0;
@@ -47,7 +47,7 @@ html{
   color: #d1ffd1;
   transform: translateY(3px);
 }
-/* Logo text */
+
 .logo {
   font-weight: bold;
   font-size: 18px;
@@ -55,7 +55,7 @@ html{
   text-decoration: none;
 }
 
-/* Navbar links */
+
 .navbar ul {
   list-style: none;
   display: flex;
@@ -262,9 +262,6 @@ html{
 
   }
 
-/* ============ Responsive Design ============ */
-
-/* For tablets (width <= 768px) */
 @media (max-width: 768px) {
   .profile-header {
     padding: 20px 10px;
@@ -289,7 +286,7 @@ html{
   }
 }
 
-/* For mobile phones (width <= 480px) */
+/* For mobile phones */
 @media (max-width: 480px) {
   .profile-header {
     padding: 15px 10px;
@@ -344,7 +341,7 @@ html{
   transform: scale(1.2);
 }
 
-/* Move name and role down when hover */
+
 .profile-header:hover .myName,
 .profile-header:hover .role {
   transform: translateY(20px);
@@ -385,7 +382,7 @@ html{
   margin-top: 0;
 }
 
-/* Hide hamburger icon on desktop */
+
 #menu-icon {
   display: none;
   font-size: 1.8em;
@@ -394,14 +391,14 @@ html{
   margin-left: 15px;
 }
 
-/* Responsive menu behavior */
+
 @media (max-width: 768px) {
   #menu-icon {
-    display: block; /* Show hamburger on mobile */
+    display: block; 
   }
 
   .navbar-content ul {
-    display: none; /* Hide links by default */
+    display: none; 
     flex-direction: column;
     background-color: #6ca66c;
     position: absolute;
@@ -413,7 +410,7 @@ html{
   }
 
   .navbar-content ul.active {
-    display: flex; /* Show when toggled */
+    display: flex; 
   }
 
   .navbar-content ul li {
