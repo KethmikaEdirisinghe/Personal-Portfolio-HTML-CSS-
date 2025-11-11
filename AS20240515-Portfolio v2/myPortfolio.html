@@ -8,6 +8,53 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"> 
  <meta name="viewport" content="width=device-width,initial-scale=1.0">
  <title>My Portfolio</title>
+  
+ <!--/*
+ //optional
+ //store data in google sheet-->
+ <script>
+document.addEventListener("DOMContentLoaded", function() {
+  
+  const form = document.querySelector("#form");
+  const submitButton = document.querySelector("#submit");
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbzHh2OYJPO70w_6jeSSHyhtXFeuzFPQ7xA9SaP8RAOgbq3kJwDjAU-zufq1MIdyx8Ro/exec';
+
+  if (form) {
+    form.addEventListener('submit', e => {
+     
+      e.preventDefault(); 
+      
+      submitButton.disabled = true;
+      
+    
+      let requestBody = new FormData(form);
+      
+      
+      fetch(scriptURL, { 
+          method: 'POST', 
+          body: requestBody 
+      })
+      .then(response => {
+       
+        if (response.ok) {
+            alert('Success! Your message has been sent.');
+            form.reset(); 
+        } else {
+            
+            alert('Error! Server responded with ' + response.status);
+        }
+        submitButton.disabled = false;
+      })
+      .catch(error => {
+       
+        alert('Error! ' + error.message);
+        submitButton.disabled = false;
+      });
+    });
+  }
+});
+  
+ </script>
 
 </head>
 
@@ -39,8 +86,8 @@
 <h2>About Me.</h2>
 <p class = "about">
 I am 21 years old undergratuate Student in Faculty of Applied Science,University of Sri Jayawardenapura,Srilanka.
-Im persuing my BSc in Physical Science with the Subject Combination of Mathematics,Statistics and Computer Science.
-My home residence is located in Ambalangoda.I had completed my 13 years of School Education in Dharmasoka College,Ambalangoda and got BBC(Maths,Chem,Phy)
+Im persuing my BSc in Physical Science with the subject combination of Mathematics,Statistics and Computer Science.
+My home residence is located in Ambalangoda.I had completed my 13 years of School Education in Dharmasoka College,Ambalangoda and recieved BBC(Maths,Chem,Phy)
 in Physical Science stream for the G.C.E A/Ls.
 </p>
 </div>
@@ -48,11 +95,11 @@ in Physical Science stream for the G.C.E A/Ls.
 <div class="section skills" id="skills">
 <h2>What I am Capable of...</h2>
 <ul>
-<li>C programming</li>
-<li>Can work with a team with anykind of Situation</li>
-<li>Love to discover in new techologies</li>
-<li>Problem Solving</li>
-<li>Love in doing Arts related tasks</li>
+<li>Proficient in C Programming – Strong understanding of algorithms, data structures, and efficient problem-solving using C.</li>
+<li>Collaborative Team Player – Able to work effectively in diverse teams and adapt to any situation with a positive mindset.</li>
+<li>Passionate About Emerging Technologies – Continuously exploring and learning new tools, frameworks, and innovations in tech.</li>
+<li>Analytical Problem Solver – Skilled at breaking down complex problems and finding creative, logical solutions.</li>
+<li>Creative & Detail-Oriented – Enjoys integrating art, design, and technology in projects to produce visually engaging results.</li>
 </ul>
 </div>
 
@@ -111,18 +158,18 @@ in Physical Science stream for the G.C.E A/Ls.
 
 <section class="contact-section" id="contact">
 <h2>Contact Me</h2>
- <form class="contact-form">
+ <form id="form" class="contact-form">
  <label for="Name">Name:</label><br>
- <input type="text" id="Name" placeholder="Enter your Name..." required><br>
+ <input type="text" id="Name" name="Name" placeholder="Enter your Name..." required><br>
  
  <label for="Email">Email:</label><br>
- <input type="text" id="Email" placeholder="address@domain.com" required><br>
+ <input type="text" id="Email" name="Email" placeholder="address@domain.com" required><br>
  
- <label for="Messege">Messege:</label><br>
- <textarea type="text" id="Messege" rows="10" placeholder="Write here..." required></textarea><br><br>
+ <label for="Message">Messege:</label><br>
+ <textarea type="text" id="Message" name="Message" rows="10" placeholder="Write here..." required></textarea><br><br>
  
  <div class="button-container">
- <input type="submit" value ="Submit"><br>
+ <input id="submit" type="submit" value ="Submit" ><br>
  </div>
 
 </form>
