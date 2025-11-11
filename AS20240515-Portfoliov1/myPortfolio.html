@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+<link rel = "stylesheet" href="portfolio.css">
+ <meta charset="utf-8" />
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"> 
+ <meta name="viewport" content="width=device-width,initial-scale=1.0">
+ <title>My Portfolio</title>
+
+</head>
+
+<body>
+  <nav class="navbar">
+  <i class="bi bi-list" id="menu-icon"></i>
+  <div class="navbar-content"><a href="#" class="logo">MyPortfolio</a>
+    <ul id="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    </div>
+    <a href="#links" class="nav-scroll-down"><i class="bi bi-caret-down-fill"></i></a>  
+  </nav>
+
+<header class="profile-header">
+<div class="profile-info">
+<div class="profile-pic">
+<img src="images/propic.jpg" alt="profile-picture" class="profile-pic">
+</div>
+<h1 class = "myName">Senuth Kethmika Bandara Edirisinghe</h1>
+<p class="role">University Undergratuage Student | Computer Science & AI ML Enthusiast </p>
+</div>
+</header>
+
+<div class="section about" id="about">
+<h2>About Me.</h2>
+<p class = "about">
+I am 21 years old undergratuate Student in Faculty of Applied Science,University of Sri Jayawardenapura,Srilanka.
+Im persuing my BSc in Physical Science with the Subject Combination of Mathematics,Statistics and Computer Science.
+My home residence is located in Ambalangoda.I had completed my 13 years of School Education in Dharmasoka College,Ambalangoda and got BBC(Maths,Chem,Phy)
+in Physical Science stream for the G.C.E A/Ls.
+</p>
+</div>
+
+<div class="section skills" id="skills">
+<h2>What I am Capable of...</h2>
+<ul>
+<li>C programming</li>
+<li>Can work with a team with anykind of Situation</li>
+<li>Love to discover in new techologies</li>
+<li>Problem Solving</li>
+<li>Love in doing Arts related tasks</li>
+</ul>
+</div>
+
+<div class="section projects" id="projects">
+<h2>My Projects</h2>
+<table border = "1">
+  <tr>
+   <th><b>Project Name</b></th>
+   <th><b>Description</b></th>
+   <th><b>Technologies Used</b></th>
+   <th><b>Preview</b></th>
+</tr>
+
+</tr>
+  <tr>
+   <td>Personal Portfolio Website</td>
+   <td>Personal Website for presenting projects and use as an cv</td>
+   <td>HTML/CSS/Bootstrap</td>
+   <td><div class="preview">
+    <img src="images/portfol.jpg" alt="portfolio-icon" width="150">
+   </div>
+  </td>
+   
+</tr>
+
+  <tr>
+   <td>Student Score Analyzer</td>
+   <td>Teacher can store marks of all the subjects in each student and grade them / placing them and gtting class average of all the class.(Max 50 students) </td>
+   <td>C language/CodeBlocks</td>
+   <td><div class="preview">
+    <img src="images/stdscore.jpg" alt="studentscore-icon" width="150">
+   </div></td>
+</tr>
+
+  <tr>
+   <td>Library Management System</td>
+   <td>300 of Books can be stored by title/author.System can add books issue books and recieved books and search books through out the system</td>
+   <td>C language/CodeBlocks</td>
+   <td><div class="preview">
+    <img src="images/library.jpg" alt="libaryManagement-icon" width="150">
+   </div></td>
+</tr>
+  <tr>
+   <td>Logistic Management System</td>
+   <td>User can manage deliveries through out the cities and can be maintain a proper dataBae with all the informations</td>
+   <td>C language/CodeBlocks</td>
+   <td><div class="preview">
+    <a href="https://github.com/KethmikaEdirisinghe/Logistics-Management-System" target="_blank">
+    <img src="images/logistic.jpg" alt="logisticManagement-icon" width="150"></a>
+   </div></td>
+</tr>
+
+</table>
+
+</div>
+
+<section class="contact-section" id="contact">
+<h2>Contact Me</h2>
+ <form class="contact-form">
+ <label for="Name">Name:</label><br>
+ <input type="text" id="Name" placeholder="Enter your Name..." required><br>
+ 
+ <label for="Email">Email:</label><br>
+ <input type="text" id="Email" placeholder="address@domain.com" required><br>
+ 
+ <label for="Messege">Messege:</label><br>
+ <textarea type="text" id="Messege" rows="10" placeholder="Write here..." required></textarea><br><br>
+ 
+ <div class="button-container">
+ <input type="submit" value ="Submit"><br>
+ </div>
+
+</form>
+</section>
+
+<div class="links">
+<h3 id="links">Connect with Me :</h3>
+<address>
+<a href="https://lk.linkedin.com/in/kethmika-edirisinghe-aa3337268" target="_blank">LinkedIn</a>
+<a href="mailto:kethmikae@gmail.com" target="_blank">Email me</a>
+</address>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+
+<script>
+  document.getElementById('menu-icon').addEventListener('click', function() {
+    document.getElementById('nav-links').classList.toggle('active');
+  });
+</script>
+
+</body> 
+
+</html>
